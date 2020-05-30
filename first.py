@@ -2,4 +2,4 @@ a=9
 
 b='amit'
 
-print('Amit its dinner time baby')
+print('Amit its dinner time baby and hard work always pays')
