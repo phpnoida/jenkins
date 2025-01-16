@@ -1,10 +1,5 @@
 pipeline {
-  agent {
-    docker {
-      image 'docker:lts' 
-       args '-v /var/run/docker.sock:/var/run/docker.sock' // Allow Docker commands inside the container
-    }
-  }
+  agent any
   stages {
     stage('Test') {
       steps {
