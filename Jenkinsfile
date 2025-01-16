@@ -1,7 +1,7 @@
 pipeline {
   agent {
     docker {
-      image 'node:16-alpine' 
+      image 'docker:lts' 
        args '-v /var/run/docker.sock:/var/run/docker.sock' // Allow Docker commands inside the container
     }
   }
