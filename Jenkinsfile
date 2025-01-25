@@ -16,9 +16,14 @@ pipeline {
             }
         }
         stage('Docker Login') {
-                        when {
-                branch 'main'
-            }
+                        when 
+                            {
+                                expression {
+                                    BRANCH_NAME == 'dev'
+                                }
+                            }
+               
+            
 
             steps {
                 script {
