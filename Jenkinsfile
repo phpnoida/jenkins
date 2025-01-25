@@ -5,7 +5,7 @@ pipeline {
             steps {
                 script {
                     echo 'testing api....'
-                    echo 'finally it wroks...'
+                    echo 'finally it wroks'
                 }
             }
         }
