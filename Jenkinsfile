@@ -5,6 +5,7 @@ pipeline {
             steps {
                 script {
                     echo 'testing api....'
+                    echo 'added to check automation...'
                 }
             }
         }
