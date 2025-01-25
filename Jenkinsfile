@@ -16,6 +16,10 @@ pipeline {
             }
         }
         stage('Docker Login') {
+                        when {
+                branch 'main'
+            }
+
             steps {
                 script {
                     echo 'docker login..'
@@ -23,6 +27,9 @@ pipeline {
             }
         }
         stage('AWS ECR Login') {
+             when {
+                branch 'main'
+            }
             steps {
                 script {
                    echo 'aws login..'
@@ -30,6 +37,9 @@ pipeline {
             }
         }
         stage('Push Image to ECR') {
+             when {
+                branch 'main'
+            }
             steps {
                 script {
                     echo 'push image to dockerhub..'
@@ -37,6 +47,9 @@ pipeline {
             }
         }
         stage('Deploy to EC2') {
+             when {
+                branch 'main'
+            }
             steps {
                 script {
                    echo 'deploying to server..'
